@@ -96,6 +96,26 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-body;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(120deg, #22d3ee, #a855f7, #f0abfc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .grid-texture {
+    background-image:
+      linear-gradient(rgba(168, 85, 247, 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34, 211, 238, 0.07) 1px, transparent 1px);
+    background-size: 44px 44px;
+  }
+  .card-glow:hover {
+    box-shadow:
+      0 0 0 1px rgba(168, 85, 247, 0.6),
+      0 20px 60px -12px rgba(168, 85, 247, 0.5);
   }
 }
